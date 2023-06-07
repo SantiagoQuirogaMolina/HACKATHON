@@ -1,0 +1,75 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.participa {
+  background-color:v.$blanco;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+  .contenedor-participa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+  h4 {
+    text-align: center;
+    margin: 5rem;
+    font-size: 2.5rem;
+  }
+  p {
+    margin: 5rem;
+    @media (max-width: 550px) {
+      margin: 2rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 5rem;
+
+    li {
+      padding: 3rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
+}
+.patrocinan {
+  .contenedor {
+    .imagen {
+      box-shadow: 0.1rem 0.2rem 0.3rem v.$gris;
+    }
+  }
+}
+.call-action {
+  box-shadow: 0.1rem 0.2rem 0.3rem v.$gris;
+  background-color: v.$amarillo;
+  color: v.$azul;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  max-width: 25rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 700px) {
+   
+    margin-bottom: 2rem;
+  }
+  &:hover {
+    transition: background-color 1s ease;
+    background-color: v.$azul;
+    color: v.$blanco;
+  }
+}

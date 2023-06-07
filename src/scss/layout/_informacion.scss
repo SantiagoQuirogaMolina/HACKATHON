@@ -1,0 +1,93 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.sobre-Hackaton {
+  padding: 5rem 0;
+  @include m.grid(2, 5rem);
+
+  @media (max-width: 1000px) {
+    @include m.grid(1, 5rem);
+  }
+
+  .imagen{
+  @media (max-width: 550px) {
+    margin-top: 4rem;
+  }}
+}
+.descriptionInicial {
+  padding: 5rem 0;
+  text-align: center;
+  h2 {
+    color: v.$azul;
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: 'Roboto',sans-serif;
+    margin-bottom: 0;
+    @media (max-width: 550px) {
+      font-size: 5rem;
+    }
+  }
+  .fecha {
+   
+    font-weight: 700;
+    margin-top: 0;
+  }
+}
+.informacionDescubre {
+  background-color: rgba(128, 128, 128, 0.574);
+}
+.informacionDesafia {
+
+
+  .contenido-desafia {
+    span{
+      font-weight: 700;
+      font-size: 3.5rem;
+      color: v.$azul;
+    }
+    h2 {
+      margin-top: 5rem;
+      text-align: center;
+      color: v.$azul;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin-bottom: 5rem;
+
+      @media (max-width: 550px) {
+        margin-left: -6rem;
+      }
+      h1 {
+        margin-bottom: 2rem;
+      text-align: center;
+      color: v.$azul;
+      }
+      li {
+        text-align: center;
+        padding: 2rem;
+        background-color: #c2dc00e7;
+        font-weight: 550;
+        color: v.$azul;
+        box-shadow: 0.1rem 0.2rem 0.3rem v.$gris;
+      }
+      @include m.grid(2, 5rem);
+    }
+  }
+}
+
+.contenido-hackaton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include m.tablet {
+    margin-top: 0;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+ 
+}

@@ -1,0 +1,137 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.premios {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.premios::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f345aa3;
+  z-index: -1; 
+}
+
+.premios h3,
+.premios p {
+  margin-left: 10rem;
+  margin-right: 10rem;
+  color: v.$blanco;
+  text-align: center;
+  @media (max-width: 550px) {
+    margin: 0;
+    
+  }
+}
+
+.premios .descripcion{
+  margin-left: 10rem;
+  margin-right: 10rem;
+  text-align: center;
+  @media (max-width: 550px) {
+    margin: 2rem;
+    text-align: left;
+  }
+}
+
+.premios .description {
+  text-transform: uppercase;
+}
+
+.premios::before {
+  content: "";
+  background-image: url(../../../build/img/fondoOpcional.webp);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.95; /* Controla la opacidad de la imagen de fondo */
+  z-index: -2; /* Asegura que la imagen de fondo esté detrás del contenido y del pseudo-elemento */
+}
+
+.premios-contenedor {
+  @include m.tablet {
+    @include m.grid(2, 5rem);
+  }
+
+  p {
+    color: v.$negro;
+  }
+}
+
+.puesto {
+  box-shadow: 0.1rem 0.2rem 0.3rem v.$gris;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+  .nombre-puesto {
+    color: v.$blanco;
+    &:after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 10rem;
+      background-size: 15rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 2rem auto 0 auto;
+      text-align: center;
+     
+    }
+  }
+}
+.primero .nombre-puesto:after {
+  background-image: url(../../../build/img/Primero.webp);
+  background-size: contain;
+}
+.segundo .nombre-puesto:after {
+  background-image: url(../../../build/img/segundo.webp);
+  background-size: contain;
+}
+.tercero .nombre-puesto:after {
+  background-image: url(../../../build/img/tercero.webp);
+  background-size: contain;
+}
+.cuarto .nombre-puesto:after {
+  background-image: url(../../../build/img/cuarto.webp);
+  background-size: contain;
+}
+
+.listado {
+  @include m.resetear-lista;
+  li {
+    color: v.$blanco;
+    padding: 2.5rem;
+    font-weight: 700;
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.bg-amarillo {
+  background-color: #00000077;
+  li:nth-child(odd) {
+    background-color: darken(#0000007e, 10%);
+    &:hover {
+      background-color: darken(#cbdc3169, 10%);
+    }
+  }
+
+ 
+}
+.bg-verde {
+  background-color: darken(#0e0e0e7e, 10%);
+  li:nth-child(odd) {
+    background-color: #716c912b;
+    &:hover {
+      background-color: darken(#cbdc3169, 10%);
+    }
+  }
+}

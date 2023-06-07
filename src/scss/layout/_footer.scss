@@ -1,0 +1,19 @@
+@use "base/variables" as v;
+
+.site-footer {
+  background-color: v.$gris;
+  padding: 2rem;
+  .contenido-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-contenido {
+    .navegacion-principal {
+      a {
+        padding: 1rem;
+      }
+    }
+  }
+}
